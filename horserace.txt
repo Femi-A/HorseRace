@@ -1,0 +1,39 @@
+Horse Race
+Define Classes:
+Horse Class:
+Contains a private member position to store the horse's position on the track.
+getPosition(): Returns the current position of the horse.
+move(): Randomly increments the horse's position by one if a randomly generated number is odd.
+Race Class:
+Contains numHorses (number of horses), trackLength (length of the track), and a vector horses holding Horse objects.
+Race(int, int): Constructor that initializes the race with the given number of horses and track length.
+runRace(): Method to start and manage the race.
+Main Function Setup:
+Prompt the user to enter the number of horses (numHorses), ensuring it's at least 2.
+Prompt the user to enter the track length (trackLength), ensuring it's at least 2.
+Create a Race object using numHorses and trackLength.
+Race Execution
+Starting the Race:
+Call runRace() on the Race object.
+Output "Race begins ---" to indicate the start of the race.
+Running the Race:
+Loop continuously to simulate the race until a winner is found.
+For each horse (indexed i from 0 to numHorses - 1):
+Call move() on the i-th horse to potentially advance its position.
+For each position (j from 0 to trackLength - 1) on the track:
+Output the horse's index (i + 1) if j equals the horse's current position.
+Otherwise, output a dot ('.') to represent an empty track position.
+After displaying the track for the i-th horse, check if its position is greater than or equal to trackLength.
+If so, announce the horse (i + 1) as the winner and exit the race loop.
+Completing the Race:
+Once a horse wins (its position reaches or exceeds trackLength), output "Horse i + 1 wins!" to announce the winner.
+Exit the runRace method, thereby completing the simulation.
+Random Number Generation
+Random Movement:
+In move(), use rand() % 2 to generate a random number (0 or 1).
+If the result is 1 (odd number), increment the horse's position.
+Main Function
+Execute Main Function:
+Initialize the program in the main() function.
+Run the setup for race parameters (numHorses and trackLength).
+Execute the race by creating a Race object and calling runRace().
